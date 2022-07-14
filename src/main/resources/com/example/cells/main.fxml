@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.cells.CAController" style = "-fx-padding: 0;
+            -fx-margin: 0; -fx-spacing: 0">
+        <top>
+                <ToolBar styleClass="topToolbar" onMouseDragged="#headerDrag"
+                         onMousePressed="#headerPressed">
+                        <!--Button text="Options" styleClass="menuButtons"></!-->
+                        <Pane HBox.hgrow = "ALWAYS"/>
+                        <Button text="{-}" styleClass="windowButton" onAction="#onIconified"/>
+                        <Button text="{X}" styleClass="windowButton"
+                                id="closeButton" onAction="#onCloseButton"/>
+                </ToolBar>
+        </top>
+        <center>
+                <BorderPane>
+                        <top>
+                                <ToolBar styleClass="mainToolbar">
+                                        
+                                </ToolBar>
+                        </top>
+                </BorderPane>
+        </center>
+</BorderPane>
